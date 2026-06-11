@@ -1,0 +1,78 @@
+Presentation: 5 Minutes
+Prepare a short walkthrough of your project.
+
+1 - Walk through grade_tracker.py(student_data.py) and explain one function in detail
+A - Walk through grade_tracker.py 
+    Show your code Walk through grade_tracker.py and explain one function in detail.
+
+Calculating Student Averages:
+This function calculates the average grade for one student.
+Stores the valid grades and loops through it. Skips the blank ones instead of crashing.
+
+Letter grades - determines the grades that convert the numeric average to a grade.
+
+Generating report
+This one processes all grades and creates the final report
+Writes the grade distribution and sorts the top 5 students by higher to lowest and also writes individual student results
+
+The main() function this one loads student data from the CSV file.
+Checks if data exists and generates the report then
+Writes it into grade_report.txt.
+
+
+B - Explain one function in detail:
+import csv - this imports the csv module in pyhon.
+def load_students(filepath):its a function that takes the filepath and makes it an argument...
+    data_student = [] -this one is an empty list to put student info. from the csv file.
+    try: this is a block that says to attempt this and if somehting happens handle the error and don't crash
+        with open(filepath, "r") - as file:opens file in read mode and it closes once finished
+            reader = csv.DictReader(file) - reads each row as a dictionary
+            for row in reader: loops in each row one student at a time
+                data_student.append(row) - then adds the dictionary to the list after all is gone through or processed.
+    except FileNotFoundError:- this takes care of the missing file and 
+        print(f"Error: File '{filepath}' not found.") if it does not exist it will say not found.
+        return[] returns an empty list instead of crashing.
+    return data_student
+            #data_student.append(row)
+data_student = load_students("data/students.csv") - runs the function and then puts the returned list in the data_student.           
+print(f"loaded {len(data_student)} students records...\n")  - printsthe number of syudents ex. 15
+print(f"Generating report.... \n")
+
+Summary
+ This opens the students.csv and reads each row as a dictionary.once done it stores all dictionary in a list and return the list. It Prints how many students loaded and prints it.
+
+2 - Explain one debugging example
+Describe one issue you encountered and how you fixed it.
+
+The main() was a problem for me.
+My program was not running correctly and calling the functions became an issue.
+I reaseached the main() function and it what it means or does, and it basically answered my question for what I was supposed to do. It explains that it was a function that manages the program and calls other functions to run on the terminal and its easier to see the overall flow too. I started calling the functions within main() and the ones that was needed to be printed on the terminal display finally came through.
+I also had indentation issue where i was getting " IndentationError: unexpected indent. Had to make sure my indenting in my code was alligned correctly.
+
+3 - Demo the program
+Run the program live from the terminal.
+
+4-Show the output file
+Open grade_report.txt and explain what it contains.
+   This section contains 4 main section:
+
+A -The Summary: this section contains the total of students records in the csv file which is 15 and the it also has the class average, the highest and lowest average performed by students.
+
+B - The Grade Distribution:
+This shows how many students earned each letter grade. Shows every studnt had a grade assigned to them and non had an N/A. 
+     for grade, count in report["grade_distribution"].items():
+
+C - Top 5 students:
+This section list the 5 highest perfoming student.
+    top_students = sorted(
+        report["student_results"],
+        key=lambda x: x["average"] if x["average"] is not None else 0,
+        reverse=True
+    )[:5]
+
+D - Individual student results:
+This one shows a report for every student. It shows their Name, Average score, and letter grade.
+    for student in report["student_results"]:
+ 
+5 - Explain requirements.txt
+For this no need of any other installs needed to run the program, only the csv module was neededso therefore the file is empty

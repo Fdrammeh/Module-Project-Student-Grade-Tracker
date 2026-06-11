@@ -1,0 +1,85 @@
+========================================
+Generating report.... 
+---- Summary ---- 
+Total Students: 15
+Class Average: 79.43
+Highest Average: 95.20
+Lowest Average: 58.20
+----------------------------------------
+Grade Distribution:
+Grade: A = 3
+Grade: B = 4
+Grade: C = 5
+Grade: D = 2
+Grade: F = 1
+Grade: N/A = 0
+----------------------------------------
+Top 5 Students:
+1. Eve Williams: 95.2 (A)
+2. Noah Garcia: 93.0 (A)
+3. Alice Johnson: 91.5 (A)
+4. Jack Taylor: 89.0 (B)
+5. Grace Lee: 86.8 (B)
+----------------------------------------
+
+Individual Student Results:
+Student Name: Alice Johnson
+Average Score: 91.5
+Letter Grade: A
+----------------------------------------
+Student Name: Bob Smith
+Average Score: 79.7
+Letter Grade: C
+----------------------------------------
+Student Name: Charlie Brown
+Average Score: 86.5
+Letter Grade: B
+----------------------------------------
+Student Name: Diana Prince
+Average Score: 70.0
+Letter Grade: C
+----------------------------------------
+Student Name: Eve Williams
+Average Score: 95.2
+Letter Grade: A
+----------------------------------------
+Student Name: Frank Miller
+Average Score: 70.0
+Letter Grade: C
+----------------------------------------
+Student Name: Grace Lee
+Average Score: 86.8
+Letter Grade: B
+----------------------------------------
+Student Name: Henry Davis
+Average Score: 78.7
+Letter Grade: C
+----------------------------------------
+Student Name: Iris Wilson
+Average Score: 62.0
+Letter Grade: D
+----------------------------------------
+Student Name: Jack Taylor
+Average Score: 89.0
+Letter Grade: B
+----------------------------------------
+Student Name: Kate Anderson
+Average Score: 76.5
+Letter Grade: C
+----------------------------------------
+Student Name: Liam Martinez
+Average Score: 84.8
+Letter Grade: B
+----------------------------------------
+Student Name: Mia Thompson
+Average Score: 58.2
+Letter Grade: F
+----------------------------------------
+Student Name: Noah Garcia
+Average Score: 93.0
+Letter Grade: A
+----------------------------------------
+Student Name: Olivia White
+Average Score: 69.5
+Letter Grade: D
+----------------------------------------
